@@ -6,12 +6,19 @@ export default class GroceryList extends React.Component{
         super(props);
 
         this.state = {
-            grocery: [{name: "bananas", quantity: "bunch"}, {name: "spinach", quantity: "2 lbs"}, {name:"milk", quantity: "1.5 gallons"}]
+            groceries: [{name: "bananas", quantity: "bunch"}, {name: "spinach", quantity: "2 lbs"}, {name:"milk", quantity: "1.5 gallons"}],
+            newItem: {}
         };
+
+    }
+
+    addItem(){
+        const groceries = [...this.state.groceries];
+        groceries.push(this.state.newItem)
+        const newItem = {}
     }
 
     render() {
-        let grocery = this.state.grocery
-        return <ul> {grocery.map(item => <GroceryListItem item = {item}/> )} </ul>
+        return <ul> {this.state.groceries.map(item => <GroceryListItem item = {item}/> )} </ul>
     }
 }

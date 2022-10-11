@@ -14,14 +14,11 @@ export default class GroceryListItem extends React.Component{
         this.setState({done: !this.state.done});
     }
 
-    render() {
-        let style = {
-            textDecoration: this.state.done ? 'line-through' : 'none',
-            fontWeight: this.state.bold ? 'bold' : 'none'
-        }
 
+    render() {
         return (
-            <li style={style}
+            <li style={{textDecoration: this.state.done ? 'line-through' : 'none',
+                    fontWeight: this.state.bold ? 'bold' : 'normal',}}
                 onMouseEnter={() => {
                     this.setState({bold:true})
                 }}
@@ -33,3 +30,4 @@ export default class GroceryListItem extends React.Component{
         )
     }
 }
+
