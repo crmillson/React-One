@@ -20,6 +20,8 @@ function App() {
       {/*  </a>*/}
       {/*</header>*/}
 
+      <h1> Grocery List </h1>
+
         <GroceryListItem />
 
     </div>
