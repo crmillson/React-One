@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import GroceryListItem from "./GroceryListItem";
+import GroceryList from "./GroceryList";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
 
       <h1> Grocery List </h1>
 
-        <GroceryListItem />
+        <GroceryList />
 
     </div>
   );
